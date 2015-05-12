@@ -1,0 +1,260 @@
+/* move special fonts to HTML head for better performance */
+
+@import url('http://fonts.googleapis.com/css?family=Open+Sans:200,300,400,600,700');
+/* custom template */
+
+html,
+body {
+    height: 100%;
+    font-family: 'Abril Fatface';
+    font-size: 25px;
+    font-weight: 700;
+}
+
+a {
+    color: #222222;
+}
+
+.wrapper,
+.row {
+    height: 100%;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.wrapper:before,
+.wrapper:after,
+.column:before,
+.column:after {
+    content: "";
+    display: table;
+}
+
+.wrapper:after,
+.column:after {
+    clear: both;
+}
+
+.column {
+    height: 100%;
+    overflow: auto;
+    *zoom: 1;
+}
+
+.column .padding {
+    padding: 20px;
+}
+
+.box {
+    bottom: 0;
+    /* increase for footer use */
+    
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    background-size: cover;
+    background-attachment: fixed;
+    background-color: #E3E5DE;
+}
+
+.divider {
+    margin-top: 32px;
+}
+
+#main {
+    background-color: #fefefe;
+    position: relative;
+    background-image: url("../../stylesheets/buschfaded.png");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#main .img-circle {
+    margin-top: 18px;
+    height: 70px;
+    width: 70px;
+}
+
+#sidebar,
+#sidebar a {
+    color: #2b271e;
+    background-color: transparent;
+    text-align: center;
+    height: 80%;
+    margin-top: 30px;
+}
+
+#sidebar a.logo {
+    display: block;
+    padding: 3px;
+    color: #2b271e;
+    height: 90%;
+    width: 100%;
+    margin: 15px;
+}
+/*
+#sidebar-footer {
+    position: absolute;
+    bottom: 5px;
+}*/
+/*
+#footer {
+    margin-bottom: 20px;
+}*/
+/* center and adjust the sidebar contents on smaller devices */
+
+@media (max-width: 768px) {
+    #sidebar,
+    #sidebar a.logo {
+        text-align: center;
+        margin: 0 auto;
+        margin-top: 30px;
+        font-size: 16px;
+        height: 80%;
+    }
+    /*#sidebar a.logo {
+        font-family: 'Abril Fatface';
+        height: 75px;
+        width: 100%;
+        margin-bottom: 30px;
+        height:100%;
+    }*/
+}
+
+.frontpg {
+    font-size: 16px;
+}
+
+@media(max-width: 768px) {
+    .frontpg {
+        font-size: 12px;
+    }
+}
+/* bootstrap overrides */
+
+h1,
+h2,
+h3 {
+    font-weight: 800;
+    font-family: 'Abril Fatface';
+}
+
+.jumbotron {
+    background-color: transparent;
+}
+
+.label-default {
+    background-color: #dddddd;
+}
+
+.page-header {
+    margin-top: 55px;
+    padding-top: 9px;
+    border-top: 1px solid #eeeeee;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.col-sm-9.full {
+    width: 100%;
+}
+
+small.text-muted {
+    font-family: courier, courier-new, monospace;
+}
+
+.centerit {
+    text-align: center;
+    opacity: 0.1;
+    z-index: 2;
+    position: relative;
+}
+
+.centerbtns {
+    text-align: center;
+    border: 1px double #DBDAD7;
+}
+
+.btn-default {
+    color: #333;
+    background-color: #fff;
+    border-color: #ccc;
+}
+
+.btn-info {
+    color: #fff;
+    background-color: #5bc0de;
+    border-color: #46b8da;
+}
+
+.btn-link {
+    font-weight: normal;
+    color: #337ab7;
+    border-radius: 0;
+}
+
+.btn-lg,
+.btn-group-lg > .btn {
+    padding: 10px 16px;
+    font-size: 18px;
+    line-height: 1.3333333;
+    border-radius: 6px;
+}
+
+.btn {
+    background: #ffffff;
+    background-image: -webkit-linear-gradient(top, #ffffff, #ffffff);
+    background-image: -moz-linear-gradient(top, #ffffff, #ffffff);
+    background-image: -ms-linear-gradient(top, #ffffff, #ffffff);
+    background-image: -o-linear-gradient(top, #ffffff, #ffffff);
+    background-image: linear-gradient(to bottom, #ffffff, #ffffff);
+    -webkit-border-radius: 5;
+    -moz-border-radius: 5;
+    border: none;
+    font-family: "Abril Fatface";
+    font-weight: 700;
+    color: #2b271e;
+    font-size: 20px;
+    padding: 8px 20px 10px 20px;
+    text-decoration: none;
+}
+
+.btn:hover {
+    background: #c0c2be;
+    background-image: -webkit-linear-gradient(top, #c0c2be, #ffffff);
+    background-image: -moz-linear-gradient(top, #c0c2be, #ffffff);
+    background-image: -ms-linear-gradient(top, #c0c2be, #ffffff);
+    background-image: -o-linear-gradient(top, #c0c2be, #ffffff);
+    background-image: linear-gradient(to bottom, #c0c2be, #ffffff);
+    text-decoration: none;
+}
+
+.menufood {
+    font-weight: 700;
+    font-size: 16px;
+    margin-bottom: 1px;
+}
+
+.menudesc {
+    margin-top: 1px;
+    font-weight: 100;
+    font-size: 10px;
+    margin-bottom: 0px;
+}
+
+.menuprice {
+    margin-top: 1px;
+    font-size: 11px;
+    font-weight: 300;
+}
+
+.menuoutline {
+    text-align: center;
+    line-height: 50%;
+}
+
+.menutitle {
+  padding-top: 10px;
+}
