@@ -30,7 +30,7 @@ var express = require('express'),
 		var host = server.address().address;
 		var port = server.address().port;
 
-		console.log('SBPtest is listening at http://', host, port);
+		console.log('Busch serve is listening at http://', host, port);
 	});
 
 

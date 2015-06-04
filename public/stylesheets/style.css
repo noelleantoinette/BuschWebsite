@@ -9,6 +9,7 @@ body {
     font-family: 'Abril Fatface';
     font-size: 25px;
     font-weight: 700;
+    
 }
 
 a {
@@ -204,12 +205,8 @@ small.text-muted {
 }
 
 .btn {
-    background: #ffffff;
-    background-image: -webkit-linear-gradient(top, #ffffff, #ffffff);
-    background-image: -moz-linear-gradient(top, #ffffff, #ffffff);
-    background-image: -ms-linear-gradient(top, #ffffff, #ffffff);
-    background-image: -o-linear-gradient(top, #ffffff, #ffffff);
-    background-image: linear-gradient(to bottom, #ffffff, #ffffff);
+    background-color: rgba(0,0,0,0);
+    
     -webkit-border-radius: 5;
     -moz-border-radius: 5;
     border: none;
@@ -219,16 +216,14 @@ small.text-muted {
     font-size: 20px;
     padding: 8px 20px 10px 20px;
     text-decoration: none;
+    outline:none;
 }
 
 .btn:hover {
-    background: #c0c2be;
-    background-image: -webkit-linear-gradient(top, #c0c2be, #ffffff);
-    background-image: -moz-linear-gradient(top, #c0c2be, #ffffff);
-    background-image: -ms-linear-gradient(top, #c0c2be, #ffffff);
-    background-image: -o-linear-gradient(top, #c0c2be, #ffffff);
-    background-image: linear-gradient(to bottom, #c0c2be, #ffffff);
+    
     text-decoration: none;
+    cursor:url("./../pics/beermini.png"), auto;
+
 }
 
 .menufood {
@@ -261,7 +256,8 @@ small.text-muted {
 /*<-- this is for pics -->
 */
 
-.arrow {
+
+/*.arrow {
     cursor: pointer;
     display: block;
     height: 64px;
@@ -271,18 +267,19 @@ small.text-muted {
     top: 50%;
     width: 64px;
     z-index: 5;
+    opacity: 1;
 }
 
 .arrow.prev {
     background-image: url("../images/prev.png");
     left: 20px;
-    opacity: 0.2;
+    opacity: 1;
     transition: all 0.2s linear 0s;
 }
 
 .arrow.next {
     background-image: url("../images/next.png");
-    opacity: 0.2;
+    opacity: 1;
     right: 20px;
     transition: all 0.2s linear 0s;
 }
@@ -293,7 +290,7 @@ small.text-muted {
 
 .arrow.next:hover {
     opacity: 1;
-}
+}*/
 
 .nav {
     bottom: -4px;
@@ -310,18 +307,18 @@ small.text-muted {
 }
 
 .nav li {
-    border: 5px solid #AAAAAA;
+    border: 1px solid #AAAAAA;
     border-radius: 5px;
     cursor: pointer;
     display: inline-block;
     height: 30px;
-    margin: 0 8px;
+    margin: 0 4px;
     position: relative;
     width: 50px;
 }
 
 .nav li.active {
-    border: 5px solid #FFFFFF;
+    border: 2px solid #FFFFFF;
 }
 
 .nav li img {
@@ -329,9 +326,8 @@ small.text-muted {
 }
 
 .slider {
-    border: 15px solid #FFFFFF;
-    border-radius: 5px;
-    height: 500px;
+    border: 2px solid #AAAAAA;
+    border-radius: 2px;
     margin: 20px auto;
     position: relative;
     width: 800px;
@@ -349,8 +345,7 @@ small.text-muted {
 
 .slide {
     position: absolute;
-    top: 0;
-    left: 0;
+    
 }
 
 .slide.ng-hide-add {
@@ -359,11 +354,6 @@ small.text-muted {
     -moz-transition: 1s linear all;
     -o-transition: 1s linear all;
     transition: 1s linear all;
-    -webkit-transform: rotateX(50deg) rotateY(30deg);
-    -moz-transform: rotateX(50deg) rotateY(30deg);
-    -ms-transform: rotateX(50deg) rotateY(30deg);
-    -o-transform: rotateX(50deg) rotateY(30deg);
-    transform: rotateX(50deg) rotateY(30deg);
     -webkit-transform-origin: right top 0;
     -moz-transform-origin: right top 0;
     -ms-transform-origin: right top 0;
@@ -388,3 +378,56 @@ small.text-muted {
 .slide.ng-hide-remove.ng-hide-remove-active {
     opacity: 1;
 }
+
+.container {
+    width: 700px;
+    height: 400px;
+
+}
+
+.resizetocontainer {
+    max-width:700px;
+    max-height:400px;
+    vertical-align:middle;
+}
+
+@media (max-width: 768px) {
+
+    .container {
+        width:350px;
+        height:200px;
+    }
+
+    .resizetocontainer {
+        max-width: 350px;
+        max-height: 200px;
+    }
+
+    .nav {
+        opacity: 0;
+    }
+
+}
+
+@media (max-width: 350px) {
+
+    .container {
+        width:280px;
+        height:200px;
+        padding: 0px;
+        
+    }
+
+    .resizetocontainer {
+        max-width: 280px;
+        max-height: 200px;
+    }
+
+    .nav {
+        opacity: 0;
+    }
+
+}
+
+
+
