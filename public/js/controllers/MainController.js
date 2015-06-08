@@ -2,6 +2,7 @@
 
 var app = angular.module('Busch', ['ngAnimate', 'ngTouch']);
 
+
 app.controller('MainController', function($scope) {
 
     $scope.first = false;

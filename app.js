@@ -7,6 +7,7 @@ var express = require('express'),
 	routes = require('./routes/'),
 	gulp = require('gulp');
 	
+	var port = process.env.PORT || 1234;
 
 	app.use(bodyParser.json());
 
@@ -19,13 +20,9 @@ var express = require('express'),
 	app.set('view engine', 'html');
 	app.set('views', __dirname + '/views');
 
-
-
-	
-
 	app.use('/', routes);
 
-	var server = app.listen(1234, function(){
+	var server = app.listen(port, function(){
 
 		var host = server.address().address;
 		var port = server.address().port;
