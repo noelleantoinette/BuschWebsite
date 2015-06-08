@@ -4,8 +4,7 @@ var express = require('express'),
 	bodyParser = require('body-parser'),
 	path = require('path'), 
 	swig = require('swig'),
-	routes = require('./routes/'),
-	gulp = require('gulp');
+	routes = require('./routes/');
 	
 	var port = process.env.PORT || 1234;
 
