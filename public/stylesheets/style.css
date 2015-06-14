@@ -1,6 +1,6 @@
 /* move special fonts to HTML head for better performance */
 
-@import url('http://fonts.googleapis.com/css?family=Open+Sans:200,300,400,600,700');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:200,300,400,600,700');
 /* custom template */
 
 html,
@@ -9,7 +9,7 @@ body {
     font-family: 'Abril Fatface';
     font-size: 25px;
     font-weight: 700;
-    
+    background-color: transparent;
 }
 
 a {
@@ -57,6 +57,7 @@ a {
     background-size: cover;
     background-attachment: fixed;
     background-color: #E3E5DE;
+    display: table-cell;
 }
 
 .divider {
@@ -64,7 +65,7 @@ a {
 }
 
 #main {
-    background-color: #fefefe;
+    background-color: transparent;
     position: relative;
     background-image: url("../../stylesheets/buschfaded.png");
     background-repeat: no-repeat;
@@ -77,17 +78,30 @@ a {
     width: 70px;
 }
 
+.bringtofront {
+    position: relative;
+    width: 300px;
+    height: 400px;
+    
+    margin-right: auto;
+    margin-left: auto;
+    top: 100px;
+    margin-bottom: 5%;
+ 
+}
+
 #sidebar,
 #sidebar a {
     color: #2b271e;
     background-color: transparent;
     text-align: center;
     height: 80%;
-    margin-top: 30px;
+    position: relative;
+    display: table-cell;
+    vertical-align: middle;
 }
 
 #sidebar a.logo {
-    display: block;
     padding: 3px;
     color: #2b271e;
     height: 90%;
@@ -110,7 +124,6 @@ a {
     #sidebar a.logo {
         text-align: center;
         margin: 0 auto;
-        margin-top: 30px;
         font-size: 16px;
         height: 80%;
     }
@@ -159,6 +172,7 @@ h3 {
 
 .col-sm-9.full {
     width: 100%;
+    background-color: rgba(255, 255, 255, 0.9);
 }
 
 small.text-muted {
@@ -204,8 +218,7 @@ small.text-muted {
 }
 
 .btn {
-    background-color: rgba(0,0,0,0);
-    
+    background-color: rgba(0, 0, 0, 0);
     -webkit-border-radius: 5;
     -moz-border-radius: 5;
     border: none;
@@ -215,14 +228,12 @@ small.text-muted {
     font-size: 20px;
     padding: 8px 20px 10px 20px;
     text-decoration: none;
-    outline:none;
+    outline: none;
 }
 
 .btn:hover {
-    
     text-decoration: none;
-    cursor:url("./../pics/beermini.png"), auto;
-
+    cursor: url("./../pics/beermini.png"), auto;
 }
 
 .menufood {
@@ -254,8 +265,6 @@ small.text-muted {
 }
 /*<-- this is for pics -->
 */
-
-
 /*.arrow {
     cursor: pointer;
     display: block;
@@ -344,7 +353,6 @@ small.text-muted {
 
 .slide {
     position: absolute;
-    
 }
 
 .slide.ng-hide-add {
@@ -376,57 +384,58 @@ small.text-muted {
 .slide,
 .slide.ng-hide-remove.ng-hide-remove-active {
     opacity: 1;
+    text-align: center;
 }
 
 .container {
     width: 700px;
     height: 400px;
+}
 
+.indexbg {
+
+    background-image: url("./../pics/indexbgedit2cropped.gif");
+    z-index: -1 !important;
+    width: 100%;
+    height: 100%;
+    background-size: 100%;
+    background-attachment: fixed;
+    text-align: center;
+
+    
 }
 
 .resizetocontainer {
-    max-width:700px;
-    max-height:400px;
-    vertical-align:middle;
+    max-width: 700px;
+    max-height: 400px;
+    vertical-align: middle;
 }
 
 @media (max-width: 768px) {
-
     .container {
-        width:350px;
-        height:200px;
+        width: 350px;
+        height: 200px;
     }
-
     .resizetocontainer {
         max-width: 350px;
         max-height: 200px;
     }
-
     .nav {
         opacity: 0;
     }
-
 }
 
 @media (max-width: 350px) {
-
     .container {
-        width:280px;
-        height:200px;
+        width: 280px;
+        height: 200px;
         padding: 0px;
-        
     }
-
     .resizetocontainer {
         max-width: 280px;
         max-height: 200px;
     }
-
     .nav {
         opacity: 0;
     }
-
 }
-
-
-

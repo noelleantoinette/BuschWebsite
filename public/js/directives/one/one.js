@@ -1,5 +1,6 @@
 'use strict'
 
+// this is brunch 
 app.directive('one', function(){
 
 	return {

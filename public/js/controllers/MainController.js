@@ -15,6 +15,7 @@ app.controller('MainController', function($scope) {
 
     $scope.pics = false;
 
+// this is brunch 
     $scope.uno = function() {
         console.log('this is ng-click', this.first)
 
@@ -30,6 +31,7 @@ app.controller('MainController', function($scope) {
         return $scope.first;
     }
 
+// this is small plates 
     $scope.dos = function() {
         console.log('this is dos', this.second)
 
@@ -44,6 +46,8 @@ app.controller('MainController', function($scope) {
         return $scope.second;
     }
 
+
+/// this is pizza 
     $scope.tres = function() {
         console.log('this is tres', this.third)
 
@@ -58,6 +62,7 @@ app.controller('MainController', function($scope) {
         return $scope.third;
     }
 
+/// this is dinner 
     $scope.quatre = function() {
         console.log('this is quatre', this.third)
 

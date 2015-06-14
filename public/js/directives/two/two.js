@@ -1,5 +1,6 @@
 'use strict'
 
+// this is small plates 
 app.directive('two', function(){
 
 	return {
