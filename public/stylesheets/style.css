@@ -403,6 +403,10 @@ small.text-muted {
     .nav {
         opacity: 0;
     }
+
+    .aboutpage {
+        font-size: 15px;
+    }
 }
 
 @media (max-width: 350px) {
@@ -416,6 +420,10 @@ small.text-muted {
         max-height: 200px;
     }
     .nav {
-        opacity: 0;
+        opacity: 5;
+    }
+
+    .aboutpage {
+        font-size: 10px;
     }
 }
