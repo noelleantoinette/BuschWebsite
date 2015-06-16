@@ -5,6 +5,8 @@ var app = angular.module('Busch', ['ngAnimate', 'ngTouch']);
 
 app.controller('MainController', function($scope) {
 
+	$scope.about = true;
+
     $scope.first = false;
 
     $scope.second = false;
@@ -25,6 +27,7 @@ app.controller('MainController', function($scope) {
             $scope.second = false;
             $scope.third = false;
             $scope.fourth = false;
+            $scope.about = false;
 
         }
 
@@ -41,6 +44,7 @@ app.controller('MainController', function($scope) {
             $scope.second = true;
             $scope.third = false;
             $scope.fourth = false;
+            $scope.about = false;
         }
 
         return $scope.second;
@@ -57,6 +61,7 @@ app.controller('MainController', function($scope) {
             $scope.second = false;
             $scope.third = true;
             $scope.fourth = false;
+            $scope.about = false;
         }
 
         return $scope.third;
@@ -72,6 +77,7 @@ app.controller('MainController', function($scope) {
             $scope.second = false;
             $scope.third = false;
             $scope.fourth =true;
+            $scope.about = false;
         }
 
         return $scope.fourth;
@@ -86,9 +92,26 @@ app.controller('MainController', function($scope) {
             $scope.second = false;
             $scope.third = false;
             $scope.fourth = false;
+            $scope.about = false;
         } 
 
         return $scope.pics;
+
+    }
+
+    $scope.intro = function() {
+        console.log('this is pics click')
+
+        if (!$scope.about) {
+            $scope.pics = false;
+            $scope.first = false;
+            $scope.second = false;
+            $scope.third = false;
+            $scope.fourth = false;
+            $scope.about = true;
+        } 
+
+        return $scope.about;
 
     }
 

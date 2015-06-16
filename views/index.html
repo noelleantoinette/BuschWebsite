@@ -3,16 +3,16 @@
     <div class="indexbg">
         <div>
             <!-- sidebar -->
-            <div >
-            <div class="bringtofront">
-                <div>
-                    <img src="../../stylesheets/firstbuschlogo.gif" z-index="1">
-                </div>
-                <!--took out column col-sm-3-->
-                <div class="logo">320 Court Street, Brooklyn
-                    <br> NY &nbsp 11231
-                    <p class="frontpg">tel 718.235.0725 </p>
-                </div>
+            <div>
+                <div class="bringtofront">
+                    <div>
+                        <img src="../../stylesheets/firstbuschlogo.gif" z-index="1">
+                    </div>
+                    <!--took out column col-sm-3-->
+                    <div class="logo">320 Court Street, Brooklyn
+                        <br> NY &nbsp 11231
+                        <p class="frontpg">tel 718.235.0725 </p>
+                    </div>
                 </div>
             </div>
             <!-- /sidebar -->
@@ -21,14 +21,16 @@
                 <div class="padding">
                     <div class="full col-sm-9">
                         <!-- content -->
-                        <div class="col-sm-12" id="featured">
+                        <div>
                             <div role="group" class="centerbtns">
                                 <button type="button" class="btn" ng-click="this.uno()" ng-show="!this.first">BRUNCH</button>
                                 <button type="button" class="btn btn-default" ng-click="this.dos()" ng-show="!this.second">SMALL PLATES</button>
                                 <button type="button" class="btn btn-default" ng-show="!this.third" ng-click="this.tres()">PIZZA</button>
                                 <button type="button" class="btn btn-link" ng-show="!this.fourth" ng-click="this.quatre()">DINNER</button>
                                 <button type="button" class="btn" ng-click="this.look()" ng-show="!this.pics">PICS</button>
+                                <button type="button" class="btn" ng-click="this.intro()" ng-show="!this.about">ABOUT</button>
                             </div>
+                            <about ng-show="this.about"></about>
                             <one ng-show="this.first"></one>
                             <two ng-show="this.second"></two>
                             <three ng-show="this.third"></three>
