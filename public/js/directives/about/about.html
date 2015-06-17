@@ -1,41 +1,25 @@
 <div class="aboutpage">
-
-<p>Brooklyn Buschenschank is a farmhouse style tavern inspired by the
-
-Alto-Adige region in Italy. The main dining room and bar boast plenty of exposed
-
-brick and reclaimed wood providing a working fireplace, communal
-
-tables and an open kitchen. </br></br> It is ideal for a gathering of 50 to 100 people. 
-
-In the warmer months the large opened windows give an  open patio feel. </br></br>
-
-Downstairs, the Ratskeller is ideal for an intimate gathering of 25 to 50 people. 
-
-The Ratskeller includes a working fireplace featuring exquisite exposed brick
-
-detailing with striking archways in the classical European style. </br></br>
-
-If you are interested in holding an event at Buschenschank please contact our events co-ordinator. <br/>
-
-Phone: 646-668-7125</br>
-
-Email: Events@Brooklynbuschenschank.com
-
-</p>
-
-<div class="container slider">
-    <!-- enumerate all photos -->
-    <img ng-repeat="photo in photos" class="slide resizetocontainer" width="700px" height="400px" ng-swipe-right="showPrev()" ng-swipe-left="showNext()" ng-show="isActive($index)" ng-src="{{photo.src}}" />
-    <!-- prev / next controls -->
-    <a class="arrow prev" href="#" ng-click="showPrev()"></a>
-    <a class="arrow next" href="#" ng-click="showNext()"></a>
-    <!-- extra navigation controls -->
-    <ul class="nav">
-        <li ng-repeat="photo in photos" ng-class="{'active':isActive($index)}">
-            <img src="{{photo.src}}" alt="{{photo.desc}}" title="{{photo.desc}}" ng-click="showPhoto($index);"  />
-        </li>
-    </ul>
-</div>
-
+    <p>Brooklyn Buschenschank is a farmhouse style tavern inspired by the Alto-Adige region in Italy. The main dining room and bar boast plenty of exposed brick and reclaimed wood providing a working fireplace, communal tables and an open kitchen. </br>
+        </br> It is ideal for a gathering of 50 to 100 people. In the warmer months the large opened windows give an open patio feel. </br>
+        </br>
+        Downstairs, the Ratskeller is ideal for an intimate gathering of 25 to 50 people. The Ratskeller includes a working fireplace featuring exquisite exposed brick detailing with striking archways in the classical European style. </br>
+        </br>
+        If you are interested in holding an event at Buschenschank please contact our events co-ordinator.
+        <br/>
+        <br> Phone: <a href="tel:646-668-7125">646-668-7125</a></br>
+        Email: events@brooklynbuschenschank.com
+    </p>
+    <div class="container slider">
+        <!-- enumerate all photos -->
+        <img ng-repeat="photo in photos" class="slide resizetocontainer" width="700px" height="400px" ng-swipe-right="showPrev()" ng-swipe-left="showNext()" ng-show="isActive($index)" ng-src="{{photo.src}}" />
+        <!-- prev / next controls -->
+        <a class="arrow prev" href="#" ng-click="showPrev()"></a>
+        <a class="arrow next" href="#" ng-click="showNext()"></a>
+        <!-- extra navigation controls -->
+        <ul class="nav">
+            <li ng-repeat="photo in photos" ng-class="{'active':isActive($index)}">
+                <img src="{{photo.src}}" alt="{{photo.desc}}" title="{{photo.desc}}" ng-click="showPhoto($index);" />
+            </li>
+        </ul>
+    </div>
 </div>

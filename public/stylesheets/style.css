@@ -14,6 +14,7 @@ body {
 
 a {
     color: #222222;
+    text-decoration: none;
 }
 
 .aboutpage {
@@ -21,7 +22,8 @@ a {
     margin-bottom: 50%;
     margin-right: 15%;
     margin-left: 15%;
-    margin-bottom: 0px
+    margin-bottom: 0px;
+    font-size: 18px;
 }
 
 .wrapper,
@@ -46,13 +48,24 @@ a {
 
 .column {
     height: 100%;
+    width: 95%;
     overflow: auto;
     *zoom: 1;
+    position: relative;
+    display: inline-block;
+
 }
 
-.column .padding {
-    padding: 20px;
-}
+/*.column {
+    padding: 20px
+
+}*/
+
+/*.padding {
+    padding: %;
+
+
+}*/
 
 .box {
     bottom: 0;
@@ -94,6 +107,8 @@ a {
     margin-left: auto;
     top: 100px;
     margin-bottom: 5%;
+    display: inline-block;
+    overflow: auto;
 }
 
 .selected {
@@ -130,7 +145,8 @@ a {
 }
 
 .frontpg {
-    font-size: 16px;
+    font-size: 20px;
+    
 }
 
 @media(max-width: 768px) {
@@ -166,6 +182,7 @@ h3 {
 .col-sm-9.full {
     width: 100%;
     background-color: rgba(255, 255, 255, 0.9);
+    text-align: center;
 }
 
 small.text-muted {
@@ -182,6 +199,9 @@ small.text-muted {
 .centerbtns {
     text-align: center;
     border: 1px double #DBDAD7;
+    position: relative;
+    overflow: auto;
+
 }
 
 .btn-default {
@@ -293,8 +313,8 @@ small.text-muted {
 .slider {
     border: 2px solid #AAAAAA;
     border-radius: 2px;
-    margin-right: auto;
-    margin-left: auto;
+    margin-right: 0 auto;
+    margin-left: 0 auto;
     margin-top: 3%;
     width: 800px;
     -webkit-perspective: 1000px;
@@ -373,6 +393,8 @@ small.text-muted {
 .container {
     width: 700px;
     height: 400px;
+    position: relative;
+    margin: 0 auto;
 }
 
 .indexbg {
@@ -403,8 +425,31 @@ small.text-muted {
     .nav {
         opacity: 0;
     }
-
     .aboutpage {
+        font-size: 15px;
+        margin-right: 5%;
+        margin-left: 5%;
+    }
+    .column {
+        width: 100%;
+    }
+    .padding {
+        padding: 0% !important;
+        width: 100%;
+
+    }
+
+    .frontpg {
+        font-size: 12px;
+    }
+
+    .bringtofront {
+        display: block;
+        margin: 0 auto;
+        min-height: 450px;
+    }
+
+    .btn {
         font-size: 15px;
     }
 }
@@ -420,10 +465,33 @@ small.text-muted {
         max-height: 200px;
     }
     .nav {
-        opacity: 5;
+        opacity: 0;
+    }
+    .aboutpage {
+        font-size: 15px;
+        margin-right: 5%;
+        margin-left: 5%;
+    }
+    .column {
+        width: 100%;
+    }
+    .padding {
+        padding: 0% !important;
+        width: 100%;
     }
 
-    .aboutpage {
-        font-size: 10px;
+    .frontpg {
+        font-size: 15px;
+        padding-bottom: 5px;
+    }
+
+    .bringtofront {
+        display: block;
+        margin: 0 auto;
+         min-height: 450px;
+    }
+
+    .btn {
+        font-size: 12px;
     }
 }

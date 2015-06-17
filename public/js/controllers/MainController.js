@@ -15,7 +15,7 @@ app.controller('MainController', function($scope) {
 
     $scope.fourth = false;
 
-    $scope.pics = false;
+    $scope.events = false;
 
 // this is brunch 
     $scope.uno = function() {
@@ -23,7 +23,7 @@ app.controller('MainController', function($scope) {
 
         if (!$scope.first) {
             $scope.first = true;
-            $scope.pics = false;
+            $scope.events = false;
             $scope.second = false;
             $scope.third = false;
             $scope.fourth = false;
@@ -40,7 +40,7 @@ app.controller('MainController', function($scope) {
 
         if (!$scope.second) {
             $scope.first = false;
-            $scope.pics = false;
+            $scope.events = false;
             $scope.second = true;
             $scope.third = false;
             $scope.fourth = false;
@@ -57,7 +57,7 @@ app.controller('MainController', function($scope) {
 
         if (!$scope.third) {
             $scope.first = false;
-            $scope.pics = false;
+            $scope.events = false;
             $scope.second = false;
             $scope.third = true;
             $scope.fourth = false;
@@ -73,7 +73,7 @@ app.controller('MainController', function($scope) {
 
         if (!$scope.four) {
             $scope.first = false;
-            $scope.pics = false;
+            $scope.events = false;
             $scope.second = false;
             $scope.third = false;
             $scope.fourth =true;
@@ -83,11 +83,11 @@ app.controller('MainController', function($scope) {
         return $scope.fourth;
     }
 
-    $scope.look = function() {
+    $scope.event = function() {
         console.log('this is pics click')
 
-        if (!$scope.pics) {
-            $scope.pics = true;
+        if (!$scope.events) {
+            $scope.events = true;
             $scope.first = false;
             $scope.second = false;
             $scope.third = false;
@@ -95,7 +95,7 @@ app.controller('MainController', function($scope) {
             $scope.about = false;
         } 
 
-        return $scope.pics;
+        return $scope.events;
 
     }
 
