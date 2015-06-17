@@ -103,7 +103,7 @@ app.controller('MainController', function($scope) {
         console.log('this is pics click')
 
         if (!$scope.about) {
-            $scope.pics = false;
+            $scope.events = false;
             $scope.first = false;
             $scope.second = false;
             $scope.third = false;
